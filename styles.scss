@@ -20,18 +20,24 @@
     
 }
 body{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
     text-align: center;
     background-color: var(--bg-main);
     color: var(--yellow-color);
+    min-height: 100vh;
 }
 .title{
     font-size:3rem;
     line-height: 1.4;
+    padding: 1.5rem;
 }
 .container{
     @extend %flex-container;
     justify-content: center;
-    min-height: 80vh;
+    // min-height: 80vh;
     padding: 0 1rem;
 }
 .container-game{
@@ -135,7 +141,6 @@ body{
         padding: 1.5rem;
     }
     .container{
-        min-height: 90vh;
         padding: 0 1rem;
         margin-top: -3rem;
     }
