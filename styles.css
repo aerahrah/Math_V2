@@ -1,6 +1,5 @@
 :root {
   --red-color:#f03e3e;
-  --blue-color: #1c7ed6;
   --green-color: #37b24d;
   --yellow-color:#f59f00;
   --bg-main:#212529;
@@ -21,19 +20,24 @@
 }
 
 body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
   text-align: center;
   background-color: var(--bg-main);
   color: var(--yellow-color);
+  min-height: 100vh;
 }
 
 .title {
   font-size: 3rem;
   line-height: 1.4;
+  padding: 1.5rem;
 }
 
 .container {
   justify-content: center;
-  min-height: 80vh;
   padding: 0 1rem;
 }
 
@@ -45,7 +49,7 @@ body {
   padding: 1.5rem 3rem;
   border-radius: 24px;
   background-color: var(--bg-secondary);
-  box-shadow: 0 3px 12px 12px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 3px 12px 12px rgba(0, 0, 0, 0.02);
 }
 
 .container-game .container-question .questions .question {
@@ -74,7 +78,7 @@ body {
   border-radius: 24px;
   background-color: var(--bg-secondary);
   color: var(--yellow-color);
-  box-shadow: 0 3px 12px 12px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 3px 12px 12px rgba(0, 0, 0, 0.02);
   font-size: 1.5rem;
   min-width: 140px;
   line-height: 1.7;
@@ -84,13 +88,13 @@ body {
 
 .container-game .container-choices .choices .choice:active {
   transform: scale(0.97);
-  box-shadow: 0 1.5px 6px 6px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 1.5px 6px 6px rgba(0, 0, 0, 0.02);
 }
 
 .score {
   display: none;
   font-size: 1.75rem;
-  margin: 1rem 0 -1rem 0;
+  margin: 1rem 0 0 0;
 }
 
 .button .next {
@@ -104,7 +108,7 @@ body {
   border: none;
   font-size: 1.25rem;
   background-color: var(--bg-secondary);
-  box-shadow: 0 3px 12px 12px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 3px 12px 12px rgba(0, 0, 0, 0.02);
 }
 
 .button .start:disabled, .button .next:disabled {
@@ -114,13 +118,17 @@ body {
 
 .button .next:active, .button .start:active {
   transform: scale(0.96);
-  box-shadow: 0 1.5px 4px 4px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 1.5px 4px 4px rgba(0, 0, 0, 0.02);
   transition: .1s ease-in-out;
+}
+
+footer {
+  font-size: 14px;
 }
 
 .header-correct {
   border: 4px solid var(--green-color) !important;
-  color: var(--green-color);
+  color: var(--green-color) !important;
   transition: .1s ease-in-out;
 }
 
@@ -131,20 +139,22 @@ body {
 
 .header-wrong {
   border: 4px solid var(--red-color) !important;
-  color: var(--red-color);
-  transform: scale(0.97) !important;
   color: var(--red-color) !important;
   transition: .1s ease-in-out;
 }
 
-@media (max-width: 500px) {
+.header-wrong.wrong-answer {
+  transform: scale(0.97) !important;
+  color: var(--red-color) !important;
+}
+
+@media (max-width: 600px) {
   .title {
     font-size: 2.25rem;
     line-height: 1.4;
     padding: 1.5rem;
   }
   .container {
-    min-height: 90vh;
     padding: 0 1rem;
     margin-top: -3rem;
   }
@@ -155,15 +165,15 @@ body {
     padding: 1.75rem 2rem;
     margin: 0 1rem;
     border-radius: 24px;
-    background-color: var(--bg-secondary);
-    box-shadow: 0 2px 8px 8px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 2px 8px 8px rgba(0, 0, 0, 0.02);
   }
   .container-game .container-question .questions .question {
-    padding: 0 .5rem;
-    font-size: 2.75rem;
+    padding: 0 .25rem;
+    font-size: 2.2rem;
     margin: 1.5rem 0;
-    letter-spacing: .1rem;
-    line-height: 1.25;
+    letter-spacing: .25rem;
+    line-height: 1.15;
+    transform: scale(1.2);
   }
   .container-game .container-question .questions .result {
     font-size: 1.25rem;
@@ -175,7 +185,7 @@ body {
   .container-game .container-choices .choices .choice {
     display: none;
     padding: 1rem 1.5rem;
-    box-shadow: 0 2px 8px 8px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 2px 8px 8px rgba(0, 0, 0, 0.02);
     font-size: 1.5rem;
     min-width: 100px;
   }
