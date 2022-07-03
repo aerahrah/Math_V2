@@ -168,7 +168,7 @@ footer {
     box-shadow: 0 2px 8px 8px rgba(0, 0, 0, 0.02);
   }
   .container-game .container-question .questions .question {
-    padding: 0 .25rem;
+    padding: 0 .5rem;
     font-size: 2.2rem;
     margin: 1.5rem 0;
     letter-spacing: .25rem;
@@ -192,7 +192,7 @@ footer {
   .score {
     display: none;
     font-size: 1.75rem;
-    margin: 1rem 0 -1rem 0;
+    margin-top: 1rem;
   }
   .button .next {
     display: none;
