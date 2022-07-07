@@ -140,25 +140,15 @@ footer{
 .header-correct{
     border: 4px solid var(--green-color) !important;
     color: var(--green-color) !important;
-    &.correct-answer{
-        transform: scale(1.12) !important;
-        color: var(--green-color) !important;
-    }
     transition: .1s ease-in-out;
+    transform: scale(1.02);
 }
 .header-wrong{
     border: 4px solid var(--red-color) !important;
     color: var(--red-color) !important;
-    &.wrong-answer{
-        transform: scale(.97) !important;
-        color: var(--red-color) !important;
-    }
     transition: .1s ease-in-out;
 }
 @media (max-width:600px){
-    body{
-        overflow: hidden;
-    }
     .title{
         font-size:2.25rem;
         line-height: 1.4;
