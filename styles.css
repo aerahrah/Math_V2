@@ -6,7 +6,7 @@
   --bg-secondary: #343a40;
 }
 
-.container, .container-game, .container-game .container-question {
+.container-game .container-question, .container-game, .container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -16,7 +16,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Bungee', cursive;
+  font-family: "Bungee", cursive;
 }
 
 body {
@@ -44,33 +44,28 @@ body {
 .container-game {
   gap: 1.2rem;
 }
-
 .container-game .container-question .questions {
   padding: 1.5rem 3rem;
   border-radius: 24px;
   background-color: var(--bg-secondary);
   box-shadow: 0 3px 12px 12px rgba(0, 0, 0, 0.02);
 }
-
 .container-game .container-question .questions .question {
   padding: 0 1rem;
   font-size: 4rem;
-  letter-spacing: .15rem;
+  letter-spacing: 0.15rem;
   transform: scale(1.12);
 }
-
 .container-game .container-question .questions .result {
   font-size: 1.5rem;
   line-height: 1.25;
 }
-
 .container-game .container-choices .choices {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   gap: 1.25rem;
 }
-
 .container-game .container-choices .choices .choice {
   display: none;
   text-align: center;
@@ -85,7 +80,6 @@ body {
   border: none;
   cursor: pointer;
 }
-
 .container-game .container-choices .choices .choice:active {
   transform: scale(0.97);
   box-shadow: 0 1.5px 6px 6px rgba(0, 0, 0, 0.02);
@@ -100,9 +94,8 @@ body {
 .button .next {
   display: none;
 }
-
 .button .next, .button .start, .button .easy, .button .medium, .button .hard, .button .mix {
-  padding: .75rem 2.25rem;
+  padding: 0.75rem 2.25rem;
   border-radius: 24px;
   color: var(--yellow-color);
   border: none;
@@ -110,22 +103,18 @@ body {
   background-color: var(--bg-secondary);
   box-shadow: 0 3px 12px 12px rgba(0, 0, 0, 0.02);
 }
-
 .button .easy, .button .medium, .button .hard, .button .mix {
   min-width: 150px;
 }
-
 .button .start:disabled, .button .next:disabled {
   color: var(--bg-main) !important;
   transition: none;
 }
-
 .button .next:active, .button .start:active, .button .easy:active, .button .medium:active, .button .hard:active, .button .mix:active {
   transform: scale(0.96);
   box-shadow: 0 1.5px 4px 4px rgba(0, 0, 0, 0.02);
-  transition: .1s ease-in-out;
+  transition: 0.1s ease-in-out;
 }
-
 .button .difficulty {
   max-width: 400px;
   display: flex;
@@ -135,7 +124,6 @@ body {
   margin-top: 1rem;
   gap: 1rem;
 }
-
 .button .difficulty .easy, .button .difficulty .medium, .button .difficulty .hard, .button .difficulty .mix {
   display: none;
   padding: 1rem 0;
@@ -143,20 +131,20 @@ body {
 
 footer {
   font-size: 14px;
-  padding: .5rem;
+  padding: 0.5rem;
 }
 
 .header-correct {
   border: 4px solid var(--green-color) !important;
   color: var(--green-color) !important;
-  transition: .1s ease-in-out;
+  transition: 0.1s ease-in-out;
   transform: scale(1.02);
 }
 
 .header-wrong {
   border: 4px solid var(--red-color) !important;
   color: var(--red-color) !important;
-  transition: .1s ease-in-out;
+  transition: 0.1s ease-in-out;
 }
 
 @media (max-width: 600px) {
@@ -178,16 +166,16 @@ footer {
   .container-game .container-question .questions {
     max-width: 360px;
     padding: 1.75rem 3rem;
-    margin: 0 .5rem;
+    margin: 0 0.5rem;
     border-radius: 24px;
     box-shadow: 0 2px 8px 8px rgba(0, 0, 0, 0.02);
   }
   .container-game .container-question .questions .question {
     max-width: 360px;
-    padding: .5rem 1rem;
+    padding: 0.5rem 1rem;
     font-size: 2rem;
     margin: 1.5rem 0;
-    letter-spacing: .05rem;
+    letter-spacing: 0.05rem;
     line-height: 1.15;
     transform: scale(1.5);
   }
@@ -218,5 +206,4 @@ footer {
     border-radius: 24px;
     font-size: 1rem;
   }
-}
-/*# sourceMappingURL=styles.css.map */
+}/*# sourceMappingURL=styles.css.map */

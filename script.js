@@ -25,7 +25,7 @@ const difficulty = document.querySelector(".difficulty");
 const choice = document.querySelectorAll(".choice");
 
 answerPlacer = (num) =>{
-    let random = Math.trunc((Math.random() * 4 +1) * (Math.round(Math.random()) ? 1 : -1)); 
+    let random = Math.trunc((Math.random() * 12 +1) * (Math.round(Math.random()) ? 1 : -1)); 
     switch(num){
         case 0:{
             CheckAnswer = firstNum + secondNum;
@@ -38,21 +38,23 @@ answerPlacer = (num) =>{
             break;
         }
         case 2:{
-            CheckAnswer = random + (firstNum - secondNum);
-            AnswerText = `${random}+(${firstNum}-${secondNum})`;
+            CheckAnswer = (firstNum - secondNum) + random;
+            AnswerText = `(${firstNum}-${secondNum})+${random}`;
             break;
         }
         case 3:{
-            CheckAnswer = random - (firstNum - secondNum);
-            AnswerText = `${random}-(${firstNum}-${secondNum})`;
+            CheckAnswer = (firstNum - secondNum)- random ;
+            AnswerText = `(${firstNum}-${secondNum})-${random}`;
             break;
         }
         case 4:{
+            random = Math.trunc((Math.random() * 4 +1) * (Math.round(Math.random()) ? 1 : -1)); 
             CheckAnswer = random * (firstNum + secondNum);
             AnswerText = `${random}*(${firstNum}+${secondNum})`;
             break;
         }
         case 5:{
+            random = Math.trunc((Math.random() * 4 +1) * (Math.round(Math.random()) ? 1 : -1)); 
             CheckAnswer = random * (firstNum - secondNum);
             AnswerText = `${random}*(${firstNum}-${secondNum})`;
             break;
@@ -71,8 +73,8 @@ numberFunction = (num1,num2,num3,num4,randomizer,randomizer1) =>{
 };
 questionGenerator = () =>{
     console.log(mode);
-    if(mode == "easy") numberFunction(26,3,18,15,2,0);  
-    else if(mode == "medium") numberFunction(13,2,15,8,1,2);
+    if(mode == "easy") numberFunction(28,4,18,15,2,0);  
+    else if(mode == "medium") numberFunction(13,4,17,8,1,2);
     else if(mode == "hard") numberFunction(5,3,12,5,1,4);
     else if(mode == "mix") numberFunction(16,5,18,5,5,0); 
 }
